@@ -3,9 +3,8 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-// import PageTodo from "./pages/todo/page-todo";
-// import PageIndex from "./pages/index/page-index";
 const PageTodo = lazy(() => import("./pages/todo/page-todo"))
+const PageTodoActive = lazy(() => import("./pages/todo_active/page-todo_active"))
 const PageIndex = lazy(() => import("./pages/index/page-index"))
 export  const  RouteConfig:React.SFC = () =>{
     return(
@@ -13,9 +12,10 @@ export  const  RouteConfig:React.SFC = () =>{
                 <Switch>
                     <Route  exact path="/" component={PageIndex}/>
                     <Route  exact  path="/todo" component={PageTodo}/>
-                    {/*<Route  path="*">*/}
-                    {/*    <div>404</div>*/}
-                    {/*</Route>*/}
+                    <Route  exact  path="/todo/active" component={PageTodoActive}/>
+                    <Route  path="*">
+                        <div>404</div>
+                    </Route>
                 </Switch>
 
         </Suspense>

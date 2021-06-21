@@ -1,8 +1,7 @@
-import  {TodoToday} from  "api/todo/todo"
-import { Itodo } from "interface/itodo/itodo";
-export  function mapTodoToday (): Itodo[]
+import {Itodo, ItodoApi} from "interface/itodo/itodo";
+export  function mapTodoToday (todoApi:ItodoApi[]): Itodo[]
 {
-    return  TodoToday().map(e=>{
+    return  todoApi.map(e=>{
         return {
             id: e.id,
             dateCreate: e.dateCreate,

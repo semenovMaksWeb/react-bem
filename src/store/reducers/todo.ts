@@ -2,7 +2,7 @@ import  { initialState, TodoAction ,ItodoReducers , TodoActionTypes } from "inte
 
 export const TodoReducer = (state = initialState, action: TodoAction): ItodoReducers => {
     switch (action.type) {
-        case TodoActionTypes.AXIOS_TODO_TODAY:
+        case TodoActionTypes.AXIOS_TODO:
             return { todo: action.payload }
         default:
             return state
