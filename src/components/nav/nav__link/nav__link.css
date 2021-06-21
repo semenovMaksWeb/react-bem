@@ -1,0 +1,9 @@
+.nav__link{
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 1s ease 0s;
+}
+.nav__link:hover, .nav__link:focus{
+    border: 0;
+    outline: 0;
+}

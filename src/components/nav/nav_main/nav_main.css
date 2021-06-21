@@ -1,0 +1,17 @@
+.nav_main{
+    background-color: var(--nav_main-color);
+}
+
+.nav_main .nav__link{
+    color: var(--nav_main__link-color);
+
+    display: block;
+    padding: 15px 8px;
+}
+
+.nav_main .nav__link:hover,
+.nav_main .nav__link:focus,
+.nav_main .nav__link_active{
+    background-color: var(--nav_main__link-bg-hover);
+    color:var(--nav_main__link-color-hover);
+}

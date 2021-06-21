@@ -1,0 +1,28 @@
+.todo__element{
+    position: relative;
+}
+.todo__element:after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    top: 3px;
+    left: -15px;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    border: 1px solid var(--main_black-color);
+}
+.todo__element_completed{
+    text-decoration: line-through;
+}
+.todo__element_completed::after{
+    content: "\2611";
+    border: 0;
+    top: -2px;
+}
+/*.todo__element_performed :after{*/
+/*    content: "\2611";*/
+/*}*/
+
+.todo__element_performed :after {
+}

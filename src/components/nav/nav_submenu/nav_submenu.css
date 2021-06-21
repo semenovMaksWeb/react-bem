@@ -1,0 +1,18 @@
+.nav_submenu{
+    background-color: var(--nav_submenu-color);
+}
+
+.nav_submenu .nav__link{
+    background-color: var(--nav_submenu___nav_link-bg);
+    color: var(--nav_submenu___nav_link-color);
+
+    display: block;
+    padding: 15px 8px;
+
+}
+
+.nav_submenu .nav__link:hover,
+.nav_submenu .nav__link:focus,
+.nav_submenu .nav__link_active{
+    color: var(--nav_submenu___nav_link_hover-color);
+}

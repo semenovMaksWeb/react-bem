@@ -1,0 +1,15 @@
+:root{
+    /* Main */
+    --nav_main-color: var(--main_black-color);
+    --nav_main__link-color: #dcdcdc;
+    /* переменные для hover */
+    --nav_main__link-color-hover: var(--main_black-color);
+    --nav_main__link-bg-hover: var(--main_white-color);
+
+    /*    Submenu */
+    --nav_submenu-color: var(--main_white-color);
+    --nav_submenu___nav_link-color: var(--main_black-color, #1C1919FF);
+    --nav_submenu___nav_link-bg: var(--main_white-color);
+    /*  переменные для hover  */
+    --nav_submenu___nav_link_hover-color: #fff;
+}
