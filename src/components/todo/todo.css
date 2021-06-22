@@ -1,7 +1,7 @@
 .todo__element{
     position: relative;
 }
-.todo__element:after{
+.todo__element .todo__text:after{
     content: "";
     height: 10px;
     width: 10px;
@@ -12,17 +12,19 @@
     cursor: pointer;
     border: 1px solid var(--main_black-color);
 }
-.todo__element_completed{
+.todo__element_completed .todo__text{
     text-decoration: line-through;
 }
-.todo__element_completed::after{
+.todo__element_completed .todo__text:after{
     content: "\2611";
     border: 0;
     top: -2px;
 }
-/*.todo__element_performed :after{*/
-/*    content: "\2611";*/
-/*}*/
-
-.todo__element_performed :after {
+.todo__text{
+    position: relative;
+    cursor: pointer;
 }
+
+
+/*.todo__element_performed :after {*/
+/*}*/

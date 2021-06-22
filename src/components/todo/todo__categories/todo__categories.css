@@ -1,0 +1,15 @@
+.todo__categories{
+    margin-bottom: 20px;
+    border: var(--todo_categories-border);
+    transition: all 1s ease;
+    padding: 3px;
+    background-color: var(--todo_categories-bg);
+    color: var(--todo_categories-color);
+    margin-right: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.todo__categories:hover,
+.todo__categories:focus{
+    background-color: var(--todo_categories-color-hover);
+}

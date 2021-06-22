@@ -1,0 +1,10 @@
+.pagination{
+    display: flex;
+}
+.pagination__number{
+    margin-right: 5px;
+    background-color: var(--pagination_number-bg);
+    color: var(--pagination_number-color);
+    padding: var(--pagination_number-padding);
+    cursor: pointer;
+}

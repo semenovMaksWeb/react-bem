@@ -1,8 +1,8 @@
 import { ItodoApi, ItodoCategories} from "interface/itodo/itodo";
-import {Pagination} from "../pagination";
+import {Pagination} from "api/pagination";
 
 const todo:ItodoApi[] = [
-    {id:1, text: "Пострить одежду", active: false, dateCreate: new Date(2021, 4, 2 ), dateExecution: new Date(2021, 5, 22 ), categories: [{id: 1, name: "Домашние дела"}]},
+    {id:1, text: "Пострить одежду", active: false, dateCreate: new Date(2021, 6, 22 ), dateExecution: new Date(2021, 5, 22 ), categories: [{id: 1, name: "Домашние дела"}]},
     {id:2, text: "Изучить Vue", active: false, dateCreate: new Date(2021, 6, 18 ), dateExecution: new Date() , categories: [{id: 2, name: "Изучения Vue"} , {id:3 , name: "Изучения Web"}]},
     {id:3, text: "Сдать Математику", active: false, dateCreate: new Date(2021, 6, 15 ), dateExecution: new Date() , categories: [{id: 4, name: "Образование"} ]},
     {id:4, text: "Пострить одежду", active: true, dateCreate: new Date(2021, 4, 2 ), dateExecution: new Date(2021, 5, 22 ), categories: [{id: 1, name: "Домашние дела"}]},
@@ -31,15 +31,17 @@ export  function TodoToday():ItodoApi[]{
 export  function  TodoActive():ItodoApi[]{
     return  todo.filter(e => !e.active)
 }
-export  function  TodoActiveAll(page: number, limit: number = 5):ItodoApi[]{
+export  function  TodoAll(page: number=1, limit: number = 5):ItodoApi[]{
     const  {start, end} = Pagination(page, limit)
-    return todo.splice(start, end)
-
+    return todo.slice(start, end)
 }
-export  function  TodoListCategories(page: number, limit: number = 5):ItodoCategories[]{
+export  function TodoAllLength(limit: number = 5){
+    return Math.ceil(todo.length / limit);
+}
+export  function  TodoListCategories(page: number=1, limit: number = 5):ItodoCategories[]{
     const  {start, end} = Pagination(page, limit)
     return categories.splice(start, end)
 }
-export function  TodoListCreate(todo: ItodoApi){
-
+export function  TodoListCreate(todoNews: ItodoApi){
+    todo.push(todoNews);
 }

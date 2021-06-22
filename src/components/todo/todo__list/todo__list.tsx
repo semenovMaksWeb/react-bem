@@ -13,7 +13,7 @@ export const TodoList = (props: iTodoListProps) => {
             <div className="todo__list">
                 {
                     props.todos.map((e, index) => (
-                        <Todo key={index} todo={e}/>
+                        <Todo key={e.id} todo={e} index={index}/>
                     ))
                 }
             </div>

@@ -1,0 +1,6 @@
+:root{
+    --todo_categories-border:  2px solid var(--main_black-color);
+    --todo_categories-bg: #639c2f;
+    --todo_categories-color: #fff;
+    --todo_categories-color-hover: #284b0a;
+}

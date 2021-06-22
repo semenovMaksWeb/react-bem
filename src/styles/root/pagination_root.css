@@ -1,0 +1,5 @@
+:root{
+    --pagination_number-bg: var(--main_black-color);
+    --pagination_number-color: #fff;
+    --pagination_number-padding: 3px 5px;
+}

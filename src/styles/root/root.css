@@ -1,4 +1,6 @@
 @import "nav_root.css";
+@import "todo_root.css";
+@import "pagination_root.css";
 :root{
     --main_black-color: #1c1919;
     --main_white-color:#c4c2c2;

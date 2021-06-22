@@ -4,7 +4,7 @@ import {TodoList} from "components/todo/todo__list/todo__list";
 import {useEffect} from "react";
 import {NavSubmenuTodo} from "components/nav/nav_submenu/nav_submenu_todo/nav_submenu_todo";
 
-export function PageTodo(){
+export function PageTodoActive(){
     const {axiosTodoActive} = useActions();
     console.log("page-todo-active");
     useEffect(()=>{
@@ -19,4 +19,4 @@ export function PageTodo(){
         </>
     )
 }
-export default PageTodo;
+export default PageTodoActive;
