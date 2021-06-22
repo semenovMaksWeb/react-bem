@@ -24,6 +24,9 @@ const categories:ItodoCategories[] = [
     {id: 3, name: "Изучения Web"},
     {id: 4, name: "Изучения React"},
     {id: 5, name: "Образование"},
+    {id: 6, name: "Образование физика"},
+    {id: 7, name: "Образование математика"},
+    {id: 8, name: "Работа"},
 ]
 export  function TodoToday():ItodoApi[]{
     return  todo.filter(e => e.dateExecution === new Date())
@@ -38,9 +41,12 @@ export  function  TodoAll(page: number=1, limit: number = 5):ItodoApi[]{
 export  function TodoAllLength(limit: number = 5){
     return Math.ceil(todo.length / limit);
 }
+export  function TodoCategoriesLength(limit: number = 5){
+    return Math.ceil(categories.length / limit);
+}
 export  function  TodoListCategories(page: number=1, limit: number = 5):ItodoCategories[]{
     const  {start, end} = Pagination(page, limit)
-    return categories.splice(start, end)
+    return categories.slice(start, end)
 }
 export function  TodoListCreate(todoNews: ItodoApi){
     todo.push(todoNews);

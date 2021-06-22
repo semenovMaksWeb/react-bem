@@ -1,14 +1,14 @@
 import {Dispatch} from "redux";
 import {TodoActionTypes, TodoAction, SetActiveTodoPayload} from "interface/itodo/itodo-reducers";
 
-import  {mapTodoToday} from  "map/mapTodoToday"
-import {TodoToday, TodoActive, TodoAll, TodoAllLength} from "api/todo/todo"
+import {mapTodo, mapTodoCategories} from "map/mapTodo"
+import {TodoToday, TodoActive, TodoAll, TodoAllLength, TodoListCategories, TodoCategoriesLength} from "api/todo/todo"
 export const axiosTodoToday = () => {
     return (dispatch: Dispatch<TodoAction>) => {
         const todoApi =  TodoToday();
         dispatch({
             type: TodoActionTypes.AXIOS_TODO,
-            payload: mapTodoToday(todoApi),
+            payload: mapTodo(todoApi),
         })
     }
 }
@@ -17,7 +17,7 @@ export const axiosTodoActive = () => {
         const todoApi =  TodoActive();
         dispatch({
             type: TodoActionTypes.AXIOS_TODO,
-            payload: mapTodoToday(todoApi)
+            payload: mapTodo(todoApi)
         })
     }
 }
@@ -27,11 +27,24 @@ export const axiosTodoAll = (page: number = 1) => {
         const todoApi =  TodoAll(page);
         dispatch({
             type: TodoActionTypes.AXIOS_TODO,
-            payload: mapTodoToday(todoApi)
+            payload: mapTodo(todoApi)
         })
         dispatch({
             type: TodoActionTypes.AXIOS_TODO_COUNT,
             payload: TodoAllLength()
+        })
+    }
+}
+export const axiosTodoCategories = (page: number = 1) => {
+    return (dispatch: Dispatch<TodoAction>) => {
+        const todoCategoriesApi =  TodoListCategories(page);
+        dispatch({
+            type: TodoActionTypes.AXIOS_TODO_CATEGORIES,
+            payload: mapTodoCategories(todoCategoriesApi)
+        })
+        dispatch({
+            type: TodoActionTypes.AXIOS_TODO_CATEGORIES_COUNT,
+            payload: TodoCategoriesLength()
         })
     }
 }

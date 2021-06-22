@@ -1,0 +1,7 @@
+.todo__list{
+    margin-top: 25px;
+}
+.todo__list .todo__list_categories{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

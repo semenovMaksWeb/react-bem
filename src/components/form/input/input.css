@@ -1,0 +1,22 @@
+.input{
+  border: 0;
+  outline: 0;
+  background: var(--input-bg);
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: var(--input-color);
+  box-shadow: var(--input-shadow);
+  width: 100%;
+  display: block;
+}
+
+.input::-webkit-input-placeholder{
+  color: var(--input-placeholder-color);
+}
+.input:-ms-input-placeholder{
+  color:  var(--input-placeholder-color);
+}
+.input:-moz-placeholder{
+  color:  var(--input-placeholder-color);
+}

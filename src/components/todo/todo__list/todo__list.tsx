@@ -1,8 +1,8 @@
 import React from "react";
 import {Itodo} from "interface/itodo/itodo";
 import {Todo} from "../todo";
-import {Container} from "../../container/container";
-
+import {Container} from "components/container/container";
+import  "./todo__list.css"
 export interface iTodoListProps {
     todos: Itodo[]
 }

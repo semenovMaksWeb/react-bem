@@ -1,0 +1,6 @@
+:root{
+    --input-placeholder-color: #fff7f7;
+    --input-color:  #e7e4e4;
+    --input-bg: linear-gradient(90deg, #adadb8, #a0a0ad, #9c9a9a, #a8acac);
+    --input-shadow: 0 1px 14px -4px rgba(255, 255, 255, 0.6);
+}

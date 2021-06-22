@@ -10,7 +10,7 @@ export function PageTodoAll(){
     const {axiosTodoAll} = useActions();
     useEffect(()=>{
         console.log(" useEffect page-todo-active " + pageActive);
-        if (!isNaN(Number(pageActive))){
+        if (!isNaN(Number(pageActive)) && pageActive ){
             axiosTodoAll(Number(pageActive));
         }else {
             axiosTodoAll();
@@ -18,7 +18,7 @@ export function PageTodoAll(){
 
     },[pageActive])
     const todo = useTypeSelector(state => state.todo.todo);
-    const pageCount = useTypeSelector(state => state.todo.count);
+    const pageCount = useTypeSelector(state => state.todo.countTodo);
     return(
         <>
             <NavSubmenuTodo  />

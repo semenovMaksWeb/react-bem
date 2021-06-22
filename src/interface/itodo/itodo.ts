@@ -9,7 +9,6 @@ export interface Itodo{
     categories: ItodoCategories[]
     timeCosts: Date,
 }
-export  interface ItodoCategories extends  Icategories {}
 export  interface ItodoApi{
     id: number,
     text: string,
@@ -18,3 +17,6 @@ export  interface ItodoApi{
     dateExecution: Date,
     categories: ItodoCategories[]
 }
+
+export  interface ItodoCategories extends  Icategories {}
+export  interface ItodoCategoriesApi extends  Icategories {}
