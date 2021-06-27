@@ -24,14 +24,14 @@ export const axiosTodoActive = () => {
 export const axiosTodoAll = (page: number = 1) => {
     return (dispatch: Dispatch<TodoAction>) => {
         console.log(page)
-        const todoApi =  TodoAll(page);
+        const todoApi =  TodoAll(page, 2);
         dispatch({
             type: TodoActionTypes.AXIOS_TODO,
             payload: mapTodo(todoApi)
         })
         dispatch({
             type: TodoActionTypes.AXIOS_TODO_COUNT,
-            payload: TodoAllLength()
+            payload: TodoAllLength(2)
         })
     }
 }

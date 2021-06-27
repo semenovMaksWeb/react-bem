@@ -8,3 +8,7 @@
     padding: var(--pagination_number-padding);
     cursor: pointer;
 }
+.pagination__number_active{
+    background-color: var(--pagination_number_acitve-bg);
+    color: var(--pagination_number_acitve-color);
+}

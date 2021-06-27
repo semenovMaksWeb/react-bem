@@ -1,6 +1,6 @@
 import React from "react";
-import "./todo__input.css"
-import {IinputProps, Input} from "components/form/input/input";
+import "components/todo/todo__input/todo__input.css"
+import {IinputProps, Input} from "components/input/input";
 
 
 export interface iTodoInputProps extends IinputProps {

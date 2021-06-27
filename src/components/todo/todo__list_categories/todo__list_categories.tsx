@@ -1,5 +1,5 @@
 import React from "react";
-import "components/todo/todo__categories/todo__list_categories/todo__list_categories.css"
+import "components/todo/todo__list_categories/todo__list_categories.css"
 import {TodoCategories} from "components/todo/todo__categories/todo__categories";
 import {ItodoCategories} from "interface/itodo/itodo";
 export interface itodoListCategoriesProps {

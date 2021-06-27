@@ -1,9 +1,9 @@
 import React from "react";
 import {Form} from "components/form/form";
 import  "./todo__form.css"
-import {TodoInput} from "./todo__input/todo__input";
+import {TodoInput} from "../todo__input/todo__input";
 import {FormTitle} from "components/form/form__title/form__title";
-import {TodoInputDate} from "./todo__input/todo__input_date/todo__input_date";
+import {TodoInputDate} from "../todo__input_date/todo__input_date";
 export interface iTodoFormProps {
 }
 

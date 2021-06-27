@@ -1,10 +1,10 @@
 import {useActions} from "hook/use-actions";
 import {useTypeSelector} from "hook/use-typed-selector";
 import {useEffect} from "react";
-import {NavSubmenuTodo} from "components/nav/nav_submenu/nav_submenu_todo/nav_submenu_todo";
+import {NavSubmenuTodo} from "components/todo/nav_submenu_todo/nav_submenu_todo";
 import {Pagination} from "components/pagination/pagination";
 import  {useLocation} from "react-router-dom";
-import {TodoListCategories} from "../../components/todo/todo__categories/todo__list_categories/todo__list_categories";
+import {TodoListCategories} from "../../components/todo/todo__list_categories/todo__list_categories";
 import {Container} from "../../components/container/container";
 export function PageTodoCategories(){
     const pageActive = new URLSearchParams(useLocation().search).get("page");
@@ -26,7 +26,7 @@ export function PageTodoCategories(){
             <Container>
                 <TodoListCategories  categories={categories}/>
             </Container>
-            <Pagination nameQuery="/todo/categories?page=" page={pageCount} />
+            {/*<Pagination nameQuery="page" url="/todo/categories" page={pageCount} />*/}
         </>
     )
 }

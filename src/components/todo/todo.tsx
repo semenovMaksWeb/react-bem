@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Itodo} from "interface/itodo/itodo";
 import  "components/todo/todo.css"
-import {TodoListCategories} from "./todo__categories/todo__list_categories/todo__list_categories";
+import {TodoListCategories} from "./todo__list_categories/todo__list_categories";
 import  {useActions} from "hook/use-actions"
 
 export interface iTodoProps {
