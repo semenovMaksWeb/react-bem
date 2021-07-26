@@ -17,19 +17,15 @@ export const Pagination = (props: iPaginationProps) => {
     const pageActive = Number(new URLSearchParams(useLocation().search).get("page")) || 1;
     const paginationIfStart = (): number => {
         if(pageActive <= Math.ceil(props.countPage / 2)) {
-            console.log("start");
             return 1;
         }
         if(pageActive - Math.ceil((props.page / 2)) === 0 ) {
-            console.log("mid");
             return pageActive - Math.ceil((props.page / 2)) + 2
         }
         if(pageActive >=  Math.ceil((props.page / 2)) + 2 ) {
-            console.log("mid++");
             console.log(Math.ceil((props.page / 2)) )
             return props.page - (props.countPage - 1)
         }
-        console.log("all")
         return  pageActive-2
 
 
